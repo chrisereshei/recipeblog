@@ -1,0 +1,55 @@
+<div class="container pt-5 pb-5">
+  <div class="h1 text-primary text-center">This is the recipe upload area</div>
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <form #recipepost="ngForm" (ngSubmit)="postrecipes(recipepost)">
+        <div class="mb-3 pt-5">
+          <label for="formGroupExampleInput" class="form-label"
+            ><strong>Post Title</strong></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="formGroupExampleInput"
+            placeholder="Enter blog post title"
+            [(ngModel)]="posttitle"
+            name="posttitle"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label"
+            ><strong>Post Description</strong></label
+          >
+
+          <textarea
+            name=""
+            id="formGroupExampleInput"
+            class="form-control"
+            cols="30"
+            rows="10"
+            [(ngModel)]="postdescription"
+            name="postdescription"
+          ></textarea>
+        </div>
+        <div class="mb-5">
+          <label for="formFile" class="form-label"
+            ><strong>Post Image</strong></label
+          >
+          <input
+            class="form-control"
+            type="file"
+            id="formFile"
+            [(ngModel)]="postimage"
+            name="postimage"
+          />
+        </div>
+
+        <button type="submit" class="pt-2 pb-2 pl-5 pr-5 btn btn-primary">
+          Send Post
+        </button>
+      </form>
+    </div>
+    <div class="col-3"></div>
+  </div>
+</div>

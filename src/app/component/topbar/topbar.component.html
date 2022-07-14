@@ -1,0 +1,23 @@
+<div class="container-fluid maindiv">
+  <div class="row">
+    <div class="col-lg-8 col-md-9">
+      <img [src]="imgURL" [alt]="imgAlt" [ngClass]="'img-fluid'" />
+    </div>
+
+    <div class="col-lg-4 col-md-3 divb p-4">
+      <p class="text-center h2 pt-2 pb-4">{{ heading }}</p>
+      <div *ngFor="let recipe of myrecipes">
+        <div class="card">
+          <img [src]="recipe.img" class="img-fluid" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">{{ recipe.title }}</h5>
+            <p class="card-text">
+              {{ recipe.description }}
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

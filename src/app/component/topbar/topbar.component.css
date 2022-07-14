@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+}
+.maindiv {
+  padding-left: 0;
+}
+
+.diva {
+  height: 650px;
+}
+.divb {
+  max-height: 670px;
+  overflow-y: scroll;
+}

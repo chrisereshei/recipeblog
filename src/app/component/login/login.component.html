@@ -1,0 +1,124 @@
+<div *ngIf="show">
+  <div class="container pt-5 pb-5">
+    <div class="row">
+      <div class="text-center h2 text-primary">User Login Page</div>
+      <div class="col-3"></div>
+      <div class="col-6 pt-5 pb-5">
+        <form [formGroup]="loginForm" (ngSubmit)="loginSubmit(loginForm)">
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >Email</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                formControlName="email"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label"
+              >Password</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                formControlName="password"
+              />
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-sm-10 offset-sm-2">
+              <button type="submit" class="btn btn-primary mt-3 btn-space">
+                Sign in
+              </button>
+              <button
+                class="btn btn-primary mt-3 btn-space"
+                (click)="registerToogle()"
+              >
+                I am a new user
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="hide">
+  <div class="container pt-5 pb-5">
+    <div class="row">
+      <div class="text-center h2 text-primary">Register</div>
+      <div class="col-3"></div>
+      <div class="col-6 pt-5 pb-5">
+        <form
+          [formGroup]="userRegister"
+          (ngSubmit)="registerSubmit(userRegister)"
+        >
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label"
+              >Email</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                formControlName="email"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputPassword3" class="col-sm-2 col-form-label"
+              >Password</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                formControlName="password"
+              />
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-sm-10 offset-sm-2">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="gridCheck1"
+                />
+                <label class="form-check-label" for="gridCheck1">
+                  Terms and Conditions
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary mt-3 btn-space">
+                Register
+              </button>
+              <button
+                class="btn btn-primary mt-3 btn-space"
+                (click)="registerToogle()"
+              >
+                I am already registered
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+</div>

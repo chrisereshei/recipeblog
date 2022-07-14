@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="h1 text-center pt-5 pb-5">OUR RECIPES LIST</div>
+    <div class="col-3" *ngFor="let recipe of myrecipes">
+      <div class="card">
+        <img [src]="recipe.img" class="img-fluid" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ recipe.title }}</h5>
+          <p class="card-text">
+            {{ recipe.description }}
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
